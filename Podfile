@@ -8,6 +8,9 @@ target 'SharingIOS' do
 use_frameworks!
 
 pod ‘Firebase/Core’
+pod ‘Firebase/Database’
 pod 'DLRadioButton', '~> 1.4'
+pod 'ChattoAdditions', '~> 3.2'
+pod ‘Chatto’, ‘=3.2’
 
 end

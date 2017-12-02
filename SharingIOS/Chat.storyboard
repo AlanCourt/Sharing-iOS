@@ -37,6 +37,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="messageTextView" destination="3Rs-Vg-BFq" id="euq-HR-R7t"/>
+                        <outlet property="sendButton" destination="Rpr-Av-8xk" id="Oe8-7r-omK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hdb-ev-Nhw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

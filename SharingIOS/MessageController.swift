@@ -7,21 +7,54 @@
 //
 
 import UIKit
+import Chatto
+import ChattoAdditions
+
+
 
 class MessageController: UIViewController {
 
+    @IBOutlet weak var messageTextView: UITextField!
+    
+    @IBOutlet weak var sendButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    public func createChatInputView() -> UIView {
+        assert(false, "Override in subclass")
+        return UIView()
     }
     
-
+    
+    
+    private func createTextInputItem() -> TextChatInputItem {
+        let item = TextChatInputItem()
+        item.textInputHandler = { [weak self] text in
+            
+        }
+        return item
+    }
+    
+    func createChatInputItems() -> [ChatInputItemProtocol] {
+        var items = [ChatInputItemProtocol]()
+        items.append(self.createTextInputItem() as! ChatInputItemProtocol)
+        return items
+    }
+    
+   
+    }
+    
+    
+    
+   
+    
+    
+    
     /*
     // MARK: - Navigation
 
@@ -32,4 +65,3 @@ class MessageController: UIViewController {
     }
     */
 
-}
