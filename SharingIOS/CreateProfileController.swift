@@ -7,18 +7,34 @@
 //
 
 import UIKit
+import DLRadioButton
 
 class CreateProfileController: UIViewController {
 
+    
+    @IBOutlet weak var btnSexo: DLRadioButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        btnSexo.isMultipleSelectionEnabled = false
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    @IBAction func btnSexoSelected(_ sender: DLRadioButton) {
+        
+        if sender.tag == 1 {
+            print("Feminino")
+        } else {
+            print("Masculino")
+        }
+        
     }
     
 
