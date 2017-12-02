@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KUg-yc-QTC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Message Controller-->
+        <scene sceneID="GfJ-AZ-jBv">
+            <objects>
+                <viewController id="sDa-Nb-O8Q" customClass="MessageController" customModule="SharingIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5Vp-vH-7kR"/>
+                        <viewControllerLayoutGuide type="bottom" id="MAv-be-R8a"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9WZ-m7-d0I">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Rs-Vg-BFq">
+                                <rect key="frame" x="16" y="574" width="243" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rpr-Av-8xk">
+                                <rect key="frame" x="267" y="574" width="92" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.95312160960000003" green="0.95312160960000003" blue="0.95312160960000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Enviar"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hdb-ev-Nhw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7344.8000000000002" y="-1859.8200899550227"/>
+        </scene>
+        <!--Conexoes Controller-->
+        <scene sceneID="llK-8q-n9A">
+            <objects>
+                <viewController id="TNZ-It-2K8" customClass="ConexoesController" customModule="SharingIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u68-4h-SgR"/>
+                        <viewControllerLayoutGuide type="bottom" id="TbG-D1-t4p"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wII-dM-Bvx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3WM-FK-a1z">
+                                <rect key="frame" x="257" y="131" width="79" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Mensagens"/>
+                                <connections>
+                                    <segue destination="sDa-Nb-O8Q" kind="show" id="xMY-Nl-wNt">
+                                        <nil key="action"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SkA-5Y-nFT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lFs-MF-Rhc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6328.8000000000002" y="-1860.7196401799101"/>
+        </scene>
+        <!--Conexões-->
+        <scene sceneID="4kp-kH-hX6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KUg-yc-QTC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Conexões" id="PQn-Fa-nu2"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ObY-EH-7Ao">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TNZ-It-2K8" kind="relationship" relationship="rootViewController" id="5Hn-9O-45Z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oyo-cz-d6k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5271" y="-1861"/>
+        </scene>
+    </scenes>
+</document>
