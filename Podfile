@@ -8,9 +8,9 @@ source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
 pod ‘Firebase/Core’
+pod ‘Firebase/Storage’
 pod ‘Firebase/Database’
 pod 'DLRadioButton', '~> 1.4'
-pod 'ChattoAdditions', '~> 3.2'
-pod ‘Chatto’, ‘=3.2’
+
 
 end
