@@ -7,13 +7,30 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class ConexoesController: UIViewController {
 
+    //var DatabaseReference = String("https://sharing-4e708.firebaseio.com/")
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        //print(ref)
+        
+        //TESTE DE LEITURA DO REALTIME DATABASE
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            print(value as Any)
+            
+            // ...
+        }) { (error) in
+            print(error.localizedDescription)
+        }
     }
 
     override func didReceiveMemoryWarning() {
