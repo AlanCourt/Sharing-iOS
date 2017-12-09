@@ -21,6 +21,9 @@
 		C28983011FD2FA9100840787 /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28983001FD2FA9100840787 /* MessageController.swift */; };
 		C28983031FD2FD3900840787 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28983021FD2FD3900840787 /* Login.storyboard */; };
 		C28983051FD2FE7900840787 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28983041FD2FE7900840787 /* Chat.storyboard */; };
+		C29381831FDC5C6000C8BFAE /* PerfilController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29381821FDC5C6000C8BFAE /* PerfilController.swift */; };
+		C29381851FDC604A00C8BFAE /* ConhecimentosCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29381841FDC604A00C8BFAE /* ConhecimentosCellController.swift */; };
+		C29381871FDC606700C8BFAE /* LinksCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29381861FDC606700C8BFAE /* LinksCellController.swift */; };
 		C2F443231FD2C46C00096BF8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2F443221FD2C46C00096BF8 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +45,9 @@
 		C28983001FD2FA9100840787 /* MessageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
 		C28983021FD2FD3900840787 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		C28983041FD2FE7900840787 /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		C29381821FDC5C6000C8BFAE /* PerfilController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilController.swift; sourceTree = "<group>"; };
+		C29381841FDC604A00C8BFAE /* ConhecimentosCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConhecimentosCellController.swift; sourceTree = "<group>"; };
+		C29381861FDC606700C8BFAE /* LinksCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinksCellController.swift; sourceTree = "<group>"; };
 		C2F443221FD2C46C00096BF8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E1D23B62C4F8147DFB98CE64 /* Pods-SharingIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharingIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SharingIOS/Pods-SharingIOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +108,9 @@
 				C28982FC1FD2F76B00840787 /* CreateProfileController.swift */,
 				C28982FE1FD2F9D900840787 /* ConexoesController.swift */,
 				C28983001FD2FA9100840787 /* MessageController.swift */,
+				C29381821FDC5C6000C8BFAE /* PerfilController.swift */,
+				C29381841FDC604A00C8BFAE /* ConhecimentosCellController.swift */,
+				C29381861FDC606700C8BFAE /* LinksCellController.swift */,
 				C25042C41FC9F21E004E6793 /* Main.storyboard */,
 				C28983021FD2FD3900840787 /* Login.storyboard */,
 				C28983041FD2FE7900840787 /* Chat.storyboard */,
@@ -263,7 +272,10 @@
 				C24143991FD3262000ED6415 /* ChatDataSource.swift in Sources */,
 				C24143971FD3240000ED6415 /* ChatProtocol.swift in Sources */,
 				C28982FD1FD2F76B00840787 /* CreateProfileController.swift in Sources */,
+				C29381831FDC5C6000C8BFAE /* PerfilController.swift in Sources */,
 				C28982FF1FD2F9D900840787 /* ConexoesController.swift in Sources */,
+				C29381851FDC604A00C8BFAE /* ConhecimentosCellController.swift in Sources */,
+				C29381871FDC606700C8BFAE /* LinksCellController.swift in Sources */,
 				C25042C11FC9F21E004E6793 /* AppDelegate.swift in Sources */,
 				C28982FB1FD2F6C900840787 /* NewUserController.swift in Sources */,
 			);
