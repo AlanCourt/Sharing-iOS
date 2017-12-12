@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		090C69391FDF2272000F3FB8 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090C69381FDF2272000F3FB8 /* DatabaseManager.swift */; };
+		090C693B1FDF30B0000F3FB8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 090C693A1FDF30B0000F3FB8 /* GoogleService-Info.plist */; };
+		090C693D1FDF52A2000F3FB8 /* AutenticationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090C693C1FDF52A2000F3FB8 /* AutenticationController.swift */; };
 		531001C8C98185A387CB6188 /* Pods_SharingIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D74B86CF6FAD10CE6105400 /* Pods_SharingIOS.framework */; };
-		C24143971FD3240000ED6415 /* ChatProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24143961FD3240000ED6415 /* ChatProtocol.swift */; };
-		C24143991FD3262000ED6415 /* ChatDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24143981FD3262000ED6415 /* ChatDataSource.swift */; };
 		C25042C11FC9F21E004E6793 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25042C01FC9F21E004E6793 /* AppDelegate.swift */; };
 		C25042C31FC9F21E004E6793 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25042C21FC9F21E004E6793 /* LoginController.swift */; };
 		C25042C61FC9F21E004E6793 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C25042C41FC9F21E004E6793 /* Main.storyboard */; };
@@ -25,13 +26,18 @@
 		C29381851FDC604A00C8BFAE /* ConhecimentosCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29381841FDC604A00C8BFAE /* ConhecimentosCellController.swift */; };
 		C29381871FDC606700C8BFAE /* LinksCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29381861FDC606700C8BFAE /* LinksCellController.swift */; };
 		C2F443231FD2C46C00096BF8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2F443221FD2C46C00096BF8 /* GoogleService-Info.plist */; };
+		C28DA9B61FDC474D001B9888 /* Mensagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DA9B51FDC474D001B9888 /* Mensagem.swift */; };
+		C2E9AF231FDC52F5003A85F2 /* ConexaoFlagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E9AF221FDC52F5003A85F2 /* ConexaoFlagCell.swift */; };
+		C2E9AF251FDC542A003A85F2 /* Conexao.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E9AF241FDC542A003A85F2 /* Conexao.swift */; };
+		C2E9AF271FDC548F003A85F2 /* ConexaoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E9AF261FDC548F003A85F2 /* ConexaoDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		090C69381FDF2272000F3FB8 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		090C693A1FDF30B0000F3FB8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		090C693C1FDF52A2000F3FB8 /* AutenticationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutenticationController.swift; sourceTree = "<group>"; };
 		0D74B86CF6FAD10CE6105400 /* Pods_SharingIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharingIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		889C1660A1C4D466B2EB06D7 /* Pods-SharingIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharingIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharingIOS/Pods-SharingIOS.debug.xcconfig"; sourceTree = "<group>"; };
-		C24143961FD3240000ED6415 /* ChatProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatProtocol.swift; sourceTree = "<group>"; };
-		C24143981FD3262000ED6415 /* ChatDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatDataSource.swift; sourceTree = "<group>"; };
 		C25042BD1FC9F21E004E6793 /* SharingIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharingIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C25042C01FC9F21E004E6793 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C25042C21FC9F21E004E6793 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -49,6 +55,10 @@
 		C29381841FDC604A00C8BFAE /* ConhecimentosCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConhecimentosCellController.swift; sourceTree = "<group>"; };
 		C29381861FDC606700C8BFAE /* LinksCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinksCellController.swift; sourceTree = "<group>"; };
 		C2F443221FD2C46C00096BF8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C28DA9B51FDC474D001B9888 /* Mensagem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mensagem.swift; sourceTree = "<group>"; };
+		C2E9AF221FDC52F5003A85F2 /* ConexaoFlagCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConexaoFlagCell.swift; sourceTree = "<group>"; };
+		C2E9AF241FDC542A003A85F2 /* Conexao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conexao.swift; sourceTree = "<group>"; };
+		C2E9AF261FDC548F003A85F2 /* ConexaoDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConexaoDataSource.swift; sourceTree = "<group>"; };
 		E1D23B62C4F8147DFB98CE64 /* Pods-SharingIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharingIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SharingIOS/Pods-SharingIOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,7 +112,12 @@
 		C25042BF1FC9F21E004E6793 /* SharingIOS */ = {
 			isa = PBXGroup;
 			children = (
+				090C693A1FDF30B0000F3FB8 /* GoogleService-Info.plist */,
 				C25042C01FC9F21E004E6793 /* AppDelegate.swift */,
+				C2E9AF261FDC548F003A85F2 /* ConexaoDataSource.swift */,
+				C2E9AF241FDC542A003A85F2 /* Conexao.swift */,
+				C2E9AF221FDC52F5003A85F2 /* ConexaoFlagCell.swift */,
+				C28DA9B51FDC474D001B9888 /* Mensagem.swift */,
 				C25042C21FC9F21E004E6793 /* LoginController.swift */,
 				C28982FA1FD2F6C900840787 /* NewUserController.swift */,
 				C28982FC1FD2F76B00840787 /* CreateProfileController.swift */,
@@ -117,9 +132,8 @@
 				C25042C71FC9F21E004E6793 /* Assets.xcassets */,
 				C25042C91FC9F21E004E6793 /* LaunchScreen.storyboard */,
 				C25042CC1FC9F21E004E6793 /* Info.plist */,
-				C2F443221FD2C46C00096BF8 /* GoogleService-Info.plist */,
-				C24143961FD3240000ED6415 /* ChatProtocol.swift */,
-				C24143981FD3262000ED6415 /* ChatDataSource.swift */,
+				090C69381FDF2272000F3FB8 /* DatabaseManager.swift */,
+				090C693C1FDF52A2000F3FB8 /* AutenticationController.swift */,
 			);
 			path = SharingIOS;
 			sourceTree = "<group>";
@@ -189,10 +203,10 @@
 			files = (
 				C28983051FD2FE7900840787 /* Chat.storyboard in Resources */,
 				C25042CB1FC9F21E004E6793 /* LaunchScreen.storyboard in Resources */,
-				C2F443231FD2C46C00096BF8 /* GoogleService-Info.plist in Resources */,
 				C25042C81FC9F21E004E6793 /* Assets.xcassets in Resources */,
 				C28983031FD2FD3900840787 /* Login.storyboard in Resources */,
 				C25042C61FC9F21E004E6793 /* Main.storyboard in Resources */,
+				090C693B1FDF30B0000F3FB8 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,18 +220,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SharingIOS/Pods-SharingIOS-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Chatto/Chatto.framework",
-				"${BUILT_PRODUCTS_DIR}/ChattoAdditions/ChattoAdditions.framework",
 				"${BUILT_PRODUCTS_DIR}/DLRadioButton/DLRadioButton.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Chatto.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChattoAdditions.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLRadioButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -267,10 +279,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				090C693D1FDF52A2000F3FB8 /* AutenticationController.swift in Sources */,
 				C25042C31FC9F21E004E6793 /* LoginController.swift in Sources */,
+				090C69391FDF2272000F3FB8 /* DatabaseManager.swift in Sources */,
+				C2E9AF231FDC52F5003A85F2 /* ConexaoFlagCell.swift in Sources */,
 				C28983011FD2FA9100840787 /* MessageController.swift in Sources */,
-				C24143991FD3262000ED6415 /* ChatDataSource.swift in Sources */,
-				C24143971FD3240000ED6415 /* ChatProtocol.swift in Sources */,
+				C2E9AF251FDC542A003A85F2 /* Conexao.swift in Sources */,
+				C2E9AF271FDC548F003A85F2 /* ConexaoDataSource.swift in Sources */,
 				C28982FD1FD2F76B00840787 /* CreateProfileController.swift in Sources */,
 				C29381831FDC5C6000C8BFAE /* PerfilController.swift in Sources */,
 				C28982FF1FD2F9D900840787 /* ConexoesController.swift in Sources */,
@@ -278,6 +293,7 @@
 				C29381871FDC606700C8BFAE /* LinksCellController.swift in Sources */,
 				C25042C11FC9F21E004E6793 /* AppDelegate.swift in Sources */,
 				C28982FB1FD2F6C900840787 /* NewUserController.swift in Sources */,
+				C28DA9B61FDC474D001B9888 /* Mensagem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
