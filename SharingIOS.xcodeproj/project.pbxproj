@@ -22,11 +22,10 @@
 		C28983011FD2FA9100840787 /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28983001FD2FA9100840787 /* MessageController.swift */; };
 		C28983031FD2FD3900840787 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28983021FD2FD3900840787 /* Login.storyboard */; };
 		C28983051FD2FE7900840787 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28983041FD2FE7900840787 /* Chat.storyboard */; };
+		C28DA9B61FDC474D001B9888 /* Mensagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DA9B51FDC474D001B9888 /* Mensagem.swift */; };
 		C29381831FDC5C6000C8BFAE /* PerfilController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29381821FDC5C6000C8BFAE /* PerfilController.swift */; };
 		C29381851FDC604A00C8BFAE /* ConhecimentosCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29381841FDC604A00C8BFAE /* ConhecimentosCellController.swift */; };
 		C29381871FDC606700C8BFAE /* LinksCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29381861FDC606700C8BFAE /* LinksCellController.swift */; };
-		C2F443231FD2C46C00096BF8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2F443221FD2C46C00096BF8 /* GoogleService-Info.plist */; };
-		C28DA9B61FDC474D001B9888 /* Mensagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DA9B51FDC474D001B9888 /* Mensagem.swift */; };
 		C2E9AF231FDC52F5003A85F2 /* ConexaoFlagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E9AF221FDC52F5003A85F2 /* ConexaoFlagCell.swift */; };
 		C2E9AF251FDC542A003A85F2 /* Conexao.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E9AF241FDC542A003A85F2 /* Conexao.swift */; };
 		C2E9AF271FDC548F003A85F2 /* ConexaoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E9AF261FDC548F003A85F2 /* ConexaoDataSource.swift */; };
@@ -51,11 +50,10 @@
 		C28983001FD2FA9100840787 /* MessageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
 		C28983021FD2FD3900840787 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		C28983041FD2FE7900840787 /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		C28DA9B51FDC474D001B9888 /* Mensagem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mensagem.swift; sourceTree = "<group>"; };
 		C29381821FDC5C6000C8BFAE /* PerfilController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilController.swift; sourceTree = "<group>"; };
 		C29381841FDC604A00C8BFAE /* ConhecimentosCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConhecimentosCellController.swift; sourceTree = "<group>"; };
 		C29381861FDC606700C8BFAE /* LinksCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinksCellController.swift; sourceTree = "<group>"; };
-		C2F443221FD2C46C00096BF8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		C28DA9B51FDC474D001B9888 /* Mensagem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mensagem.swift; sourceTree = "<group>"; };
 		C2E9AF221FDC52F5003A85F2 /* ConexaoFlagCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConexaoFlagCell.swift; sourceTree = "<group>"; };
 		C2E9AF241FDC542A003A85F2 /* Conexao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conexao.swift; sourceTree = "<group>"; };
 		C2E9AF261FDC548F003A85F2 /* ConexaoDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConexaoDataSource.swift; sourceTree = "<group>"; };
