@@ -8,44 +8,138 @@
 
 import UIKit
 import DLRadioButton
+import MobileCoreServices
+import Firebase
+
 
 class CreateProfileController: UIViewController {
 
-    
+    @IBOutlet weak var txtName: UITextField!
+    @IBOutlet weak var txtBirthDate: UITextField!
+    @IBOutlet weak var txtCity: UITextField!
     @IBOutlet weak var btnSexo: DLRadioButton!
+    @IBOutlet weak var imgProfile: UIImageView!
+    @IBOutlet weak var txtProfession: UITextField!
+    
+    private let datePicker = UIDatePicker()
+    var imageData:Data!
+    var showMainView:Bool = false
+    var sexOption:String = "M"
+    var teacher:String = "N"
+    var uid:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        showDatePicker()
         btnSexo.isMultipleSelectionEnabled = false
-
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        if let auth = Auth.auth().currentUser {
+            self.uid = auth.uid
+        }
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        return self.showMainView
+    }
+    
+    @IBAction func btnChoosePhotoClick(_ sender: Any) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.mediaTypes = [kUTTypeImage as String]
+        imagePicker.delegate = self
+        present(imagePicker, animated:true, completion:nil)
+    }
     
     @IBAction func btnSexoSelected(_ sender: DLRadioButton) {
-        
-        if sender.tag == 1 {
-            print("Feminino")
-        } else {
-            print("Masculino")
+        switch sender.tag {
+        case 1:
+            self.sexOption = "F"
+        case 2:
+            self.sexOption = "M"
+        case 3:
+            self.teacher = "S"
+        default:
+            self.teacher = "N"
         }
-        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func showDatePicker() {
+        datePicker.datePickerMode = .date
+        let toolbar = UIToolbar();
+        toolbar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.bordered, target: self, action: "doneDatePicker")
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.bordered, target: self, action: "cancelDatePicker")
+        toolbar.setItems([doneButton,spaceButton,cancelButton], animated: false)
+        
+        txtBirthDate.inputAccessoryView = toolbar
+        txtBirthDate.inputView = datePicker
     }
-    */
+    
+    func doneDatePicker() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy"
+        txtBirthDate.text = formatter.string(from: datePicker.date)
+        self.view.endEditing(true)
+    }
+    
+    func cancelDatePicker() {
+        self.view.endEditing(true)
+    }
 
+    @IBAction func btnSaveProfileClick(_ sender: Any) {
+        if let name = txtName.text, let birthDate = txtBirthDate.text, let city = txtCity.text, let profession = txtProfession.text, !name.isEmpty, !birthDate.isEmpty, !city.isEmpty, !profession.isEmpty {
+            var user = ModelFactory.getUser(nomeCompleto: name, dataNascimento: birthDate, foto: "", cidade: city, ensina: teacher, sexo: sexOption, profissao: profession)
+            if imgProfile.image != nil {
+                uploadImageToFirebaseStorage(user)
+            } else {
+                saveNewUser(user)
+            }
+        } else {
+            self.showMessage(title: "Atenção", message: "O nome, a data de nascimento e a cidade são obrigatórios")
+        }
+    }
+    
+    func saveNewUser(_ user:[String:Any]) {
+        let databaseManager = DatabaseManager()
+        databaseManager.insert(node: "usuario", uid: self.uid, data: user)
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let mainViewController = storyBoard.instantiateInitialViewController()
+        self.present(mainViewController!, animated:true, completion:nil)
+    }
+}
+
+extension CreateProfileController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        guard let mediaType:String = info[UIImagePickerControllerMediaType] as? String else {
+            dismiss(animated: true, completion: nil)
+            return
+        }
+        if mediaType == (kUTTypeImage as String) {
+            if let originalImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+                self.imgProfile.image = originalImage
+            }
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func uploadImageToFirebaseStorage(_ user:[String:Any]) {
+        let storageRef = Storage.storage().reference()
+        let urlImage = "images/" + self.uid + ".jpg"
+        let mountainsRef = storageRef.child(urlImage)
+        
+        mountainsRef.putData(UIImagePNGRepresentation(imgProfile.image!)!, metadata: nil) { metadata, error in
+            if (error != nil) {
+                self.showMessage(title: "Erro", message: error.debugDescription)
+            } else {
+                var newUser = user
+                newUser["foto"] = urlImage
+                self.saveNewUser(newUser)
+            }
+        }
+    }
 }

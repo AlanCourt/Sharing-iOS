@@ -30,6 +30,10 @@ class DatabaseManager {
         ref.child(node).childByAutoId().setValue(data)
     }
     
+    func insert(node:String, uid:String, data:[String:Any]) {
+        ref.child(node).child(uid).setValue(data)
+    }
+    
     func update(node:String, childId:String, data:[String:Any]) {
         ref.child(node).child(childId).updateChildValues(data)
     }
