@@ -45,5 +45,9 @@ class DatabaseManager {
     func searchEqual(node:String, filter:String, filterValue:Any) -> DatabaseQuery {
         return ref.child(node).queryOrdered(byChild: filter).queryEqual(toValue: filterValue)
     }
+    
+    func getReferenceByUid(node:String, uid:String) -> DatabaseReference {
+        return ref.child(node).child(uid)
+    }
 }
 

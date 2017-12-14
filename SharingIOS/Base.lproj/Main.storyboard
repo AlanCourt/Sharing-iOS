@@ -450,12 +450,18 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <state key="normal" title="Sair"/>
+                                                <connections>
+                                                    <action selector="logoutButtonClick:" destination="DfW-4i-yqE" eventType="touchUpInside" id="Ydc-h1-HKu"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUt-sf-r3r">
                                                 <rect key="frame" x="20" y="786" width="335" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                 <state key="normal" title="Excluir conta"/>
+                                                <connections>
+                                                    <action selector="deleteAccountButtonClick:" destination="DfW-4i-yqE" eventType="touchUpInside" id="Xxd-1y-9iu"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -483,6 +489,7 @@
                     <navigationItem key="navigationItem" title="Meu Perfil" id="68N-a2-iKX">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="AgX-fu-tFp">
                             <connections>
+                                <action selector="editProfileButtonClick:" destination="DfW-4i-yqE" id="ylN-UP-9Ep"/>
                                 <segue destination="1k2-xG-Jh7" kind="show" identifier="editarPerfil" id="LFN-1V-RCN"/>
                             </connections>
                         </barButtonItem>

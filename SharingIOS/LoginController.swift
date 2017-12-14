@@ -27,9 +27,7 @@ class LoginController: AutenticationController {
                     if (isPasswordValid(password)) {
                         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
                             if user != nil {
-                                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                                let mainViewController = storyBoard.instantiateInitialViewController()
-                                self.present(mainViewController!, animated:true, completion:nil)
+                                self.changeStoryboard(name: "Main")
                             } else {
                                 self.showMessage(title: "Erro", message: error.debugDescription)
                             }

@@ -103,9 +103,7 @@ class CreateProfileController: UIViewController {
     func saveNewUser(_ user:[String:Any]) {
         let databaseManager = DatabaseManager()
         databaseManager.insert(node: "usuario", uid: self.uid, data: user)
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let mainViewController = storyBoard.instantiateInitialViewController()
-        self.present(mainViewController!, animated:true, completion:nil)
+        self.changeStoryboard(name: "Main")
     }
 }
 

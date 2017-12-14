@@ -305,7 +305,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r6A-fg-IkC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1928.8" y="138.53073463268368"/>
+            <point key="canvasLocation" x="2268" y="138.53073463268368"/>
         </scene>
         <!--Main-->
         <scene sceneID="jF5-Qi-g3Q">
@@ -388,7 +388,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Yr-Zq-oLP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2746" y="662"/>
+            <point key="canvasLocation" x="3084" y="661.61919040479768"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="oAz-ge-aPg">
@@ -473,6 +473,9 @@
                                 <rect key="frame" x="132" y="555" width="111" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Esqueci a senha"/>
+                                <connections>
+                                    <segue destination="4sJ-tN-5nS" kind="presentation" id="5FX-O4-xSJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -485,6 +488,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RmJ-J1-6lc" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="140" y="138.98050974512745"/>
+        </scene>
+        <!--Esqueci Senha Controller-->
+        <scene sceneID="qDX-aE-qhg">
+            <objects>
+                <viewController id="xij-1A-3E2" customClass="EsqueciSenhaController" customModule="SharingIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HWU-bH-dP9"/>
+                        <viewControllerLayoutGuide type="bottom" id="iRl-C4-Xnt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pPw-Sf-3gl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Esqueci a senha" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Urq-6n-eGI">
+                                <rect key="frame" x="16" y="105" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivh-52-Qy1">
+                                <rect key="frame" x="48" y="176" width="278" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8TA-hf-hCd">
+                                <rect key="frame" x="48" y="201" width="278" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78u-NN-hwU">
+                                <rect key="frame" x="48" y="300" width="278" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93440333549999999" green="0.93440333549999999" blue="0.93440333549999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Alterar senha"/>
+                                <connections>
+                                    <action selector="sendForgotPasswordButtonClick:" destination="xij-1A-3E2" eventType="touchUpInside" id="Wn0-t2-8mT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zan-J9-yuO">
+                        <barButtonItem key="backBarButtonItem" title="Cancelar" id="FAr-3E-yDr"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="txtEmail" destination="8TA-hf-hCd" id="jYQ-fx-PqD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PKg-dI-hmc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="1641"/>
         </scene>
         <!--New User Controller-->
         <scene sceneID="3SO-MA-iBm">
@@ -582,6 +642,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fj6-BA-igY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1087" y="139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UeU-yo-ExJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4sJ-tN-5nS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="587-9w-lKo">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xij-1A-3E2" kind="relationship" relationship="rootViewController" id="8IA-GK-FYg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NPh-wc-Ya9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="896"/>
         </scene>
     </scenes>
 </document>

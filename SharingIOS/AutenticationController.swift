@@ -27,4 +27,10 @@ extension UIViewController {
         alertController.addAction(okAction)
         self.present(alertController, animated: true, completion: nil)
     }
+    
+    func changeStoryboard(name:String) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: name, bundle:nil)
+        let mainViewController = storyBoard.instantiateInitialViewController()
+        self.present(mainViewController!, animated:true, completion:nil)
+    }
 }
