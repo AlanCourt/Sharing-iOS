@@ -10,9 +10,9 @@ import UIKit
 
 struct Conexao {
     
-    
-    var nome: String
-    var foto: String
-    var id: Int
+    var nomeCompleto: String
+    //var foto: String
+    var id: String
+    var profissao: String
     
 }

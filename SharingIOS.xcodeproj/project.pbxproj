@@ -132,12 +132,12 @@
 				C2E9AF261FDC548F003A85F2 /* ConexaoDataSource.swift */,
 				C2E9AF241FDC542A003A85F2 /* Conexao.swift */,
 				C2E9AF221FDC52F5003A85F2 /* ConexaoFlagCell.swift */,
+				C28982FE1FD2F9D900840787 /* ConexoesController.swift */,
+				C28983001FD2FA9100840787 /* MessageController.swift */,
 				C28DA9B51FDC474D001B9888 /* Mensagem.swift */,
 				C25042C21FC9F21E004E6793 /* LoginController.swift */,
 				C28982FA1FD2F6C900840787 /* NewUserController.swift */,
 				C28982FC1FD2F76B00840787 /* CreateProfileController.swift */,
-				C28982FE1FD2F9D900840787 /* ConexoesController.swift */,
-				C28983001FD2FA9100840787 /* MessageController.swift */,
 				45765D511FE29F950042B52A /* PesquisarController.swift */,
 				45765D531FE2A1FB0042B52A /* PesquisarCellController.swift */,
 				C29381821FDC5C6000C8BFAE /* PerfilController.swift */,
@@ -241,6 +241,8 @@
 				"${BUILT_PRODUCTS_DIR}/DLRadioButton/DLRadioButton.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -249,6 +251,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLRadioButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -446,6 +450,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.senac.fspoa.edm.2017.alancourt.SharingIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -460,6 +465,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.senac.fspoa.edm.2017.alancourt.SharingIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

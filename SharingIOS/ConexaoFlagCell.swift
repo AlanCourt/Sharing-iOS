@@ -8,20 +8,19 @@
 
 import UIKit
 
-class ConexaoFlagCell: UICollectionViewCell {
-    
+class ConexaoFlagCell: UITableViewCell {
     
     @IBOutlet weak var foto: UIImageView!
-    
     @IBOutlet weak var nomeLabel: UILabel!
-    
-    @IBOutlet weak var novaMensagem: UIImageView!
+    @IBOutlet weak var novaMensagem: UIButton!
+    @IBOutlet weak var profissaoLabel: UILabel!
     
     var conexao: Conexao! {
         didSet {
-            self.nomeLabel.text = self.conexao.nome
-            self.foto.image = UIImage(named: self.conexao.foto)
-            self.novaMensagem.image = UIImage(named: "icon-message")
+            self.nomeLabel.text = self.conexao.nomeCompleto
+            self.profissaoLabel.text = self.conexao.profissao
+            //self.foto.image = UIImage(named: self.conexao.foto)
+            //self.novaMensagem.image = UIImage(named: "icon-message")
             
         }
     }

@@ -10,22 +10,68 @@ import UIKit
 import Firebase
 import FirebaseStorage
 
-class ConexoesController: UIViewController,UICollectionViewDataSource {
+class ConexoesController: UIViewController, UITableViewDelegate, UITableViewDataSource, FetchData {
     
+    @IBOutlet weak var conexoesTable: UITableView!
     
-
-    @IBOutlet weak var collectionView: UICollectionView!
+    let databaseManager = DatabaseManager()
+    var conexoes = [Conexao]()
     
-    private var data: ConexaoDataSource!
+    //@IBOutlet weak var collectionView: UICollectionView!
+    //private var data: ConexaoDataSource!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.data = ConexaoDataSource()
+        databaseManager.delegate = self
+        databaseManager.getConexoes()
+        
+        
+        /*self.data = ConexaoDataSource()
         self.collectionView.dataSource = self
         let storage = Storage.storage()
-        let storageRef = storage.reference()
+        let storageRef = storage.reference()*/
+        
+    }
+    
+    func dataReceived(conexoes: [Conexao]) {
+        self.conexoes = conexoes
+        
+        for conexao in conexoes {
+            
+            if conexao.id == Auth.auth().currentUser?.uid {
+                
+            }
+            
         }
+        
+        conexoesTable.reloadData()
+    }
 
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return conexoes.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "conexaoCell", for: indexPath) as! ConexaoFlagCell
+        
+        cell.conexao = self.conexoes[indexPath.row]
+        
+        return cell
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    /*func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.data.data.count
     }
     
@@ -37,9 +83,6 @@ class ConexoesController: UIViewController,UICollectionViewDataSource {
         cell.conexao = self.data.data[indexPath.row]
         
         return cell
-    }
-
-    
-    
+    }*/
     
 }
