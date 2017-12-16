@@ -16,6 +16,13 @@ class LoginController: AutenticationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let user = Auth.auth().currentUser {
+            self.changeStoryboard(name: "Main")
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
     }
 
     @IBAction func signInButtonClick(_ sender: Any) {

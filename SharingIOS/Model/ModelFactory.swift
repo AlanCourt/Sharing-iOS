@@ -22,4 +22,21 @@ class ModelFactory {
         ]
         return data
     }
+    
+    static func getLink(url:String, usuario:String) -> [String: Any] {
+        var data: [String: Any] = [
+            "url": url,
+            "usuario": usuario
+        ]
+        return data
+    }
+    
+    static func getKnowlege(titulo:String, nivel:String, usuario:String) -> [String: Any] {
+        var data: [String: Any] = [
+            "titulo": titulo,
+            "nivel": nivel,
+            "usuario": usuario
+        ]
+        return data
+    }
 }

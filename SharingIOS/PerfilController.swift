@@ -50,7 +50,12 @@ class PerfilController: UIViewController, UICollectionViewDataSource {
             let ref = self.databaseManager.getReferenceByUid(node: "usuario", uid: uid)
             ref.observeSingleEvent(of: .value, with: { (snapshot) in
                 self.user = snapshot.value as? NSDictionary as! [String : Any]
-                self.downloadImageToMemory(url: url)
+                let foto = self.user["foto"] as! String
+                if !foto.isEmpty {
+                    self.downloadImageToMemory(url: url)
+                } else {
+                    self.fillFields()
+                }
             }) { (error) in
                 self.showMessage(title: "Erro", message: error.localizedDescription)
             }

@@ -28,6 +28,9 @@ class CreateProfileController: UIViewController {
     var teacher:String = "N"
     var uid:String!
     
+    var link:[String:Any]!
+    var knowlege:[String:Any]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         showDatePicker()
@@ -38,7 +41,11 @@ class CreateProfileController: UIViewController {
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        return self.showMainView
+        if identifier == "popupConhecimento" || identifier == "popupLink" {
+            return true
+        } else {
+            return self.showMainView
+        }
     }
     
     @IBAction func btnChoosePhotoClick(_ sender: Any) {
@@ -104,6 +111,34 @@ class CreateProfileController: UIViewController {
         let databaseManager = DatabaseManager()
         databaseManager.insert(node: "usuario", uid: self.uid, data: user)
         self.changeStoryboard(name: "Main")
+    }
+    
+    @IBAction func knowlegeAddButtonClick(_ sender: Any) {
+        performSegue(withIdentifier: "conhecimentoPopup", sender: nil)
+    }
+    
+    @IBAction func linkAddButtonClick(_ sender: Any) {
+        performSegue(withIdentifier: "linkPopup", sender: nil)
+    }
+    
+    @IBAction func knowlegeAddUnwind(segue: UIStoryboardSegue) {
+        if let knowlegeVC = segue.source as? ConhecimentoViewController, segue.identifier == "salvarConhecimento" {
+            self.knowlege = knowlegeVC.knowlege
+        }
+    }
+    
+    @IBAction func linkAddUnwind(segue: UIStoryboardSegue) {
+        if let linkVC = segue.source as? LinkViewController, segue.identifier == "salvarLink" {
+            self.link = linkVC.link
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let knowlegeVC = segue.destination as? ConhecimentoViewController, segue.identifier == "conhecimentoPopup" {
+            knowlegeVC.knowlege = self.knowlege
+        } else if let linkVC = segue.destination as? LinkViewController, segue.identifier == "linkPopup" {
+            linkVC.link = self.link
+        }
     }
 }
 
