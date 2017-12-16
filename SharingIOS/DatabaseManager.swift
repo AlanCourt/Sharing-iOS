@@ -19,8 +19,14 @@
 import Foundation
 import Firebase
 
+protocol FetchData: class {
+    func dataReceived(conexoes: [Conexao])
+}
+
 class DatabaseManager {
     var ref: DatabaseReference!
+    
+    weak var delegate: FetchData?
     
     init() {
         ref = Database.database().reference()
@@ -49,5 +55,28 @@ class DatabaseManager {
     func getReferenceByUid(node:String, uid:String) -> DatabaseReference {
         return ref.child(node).child(uid)
     }
+    
+    func getConexoes() {
+        
+        ref.child("usuario").observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            var conexoes = [Conexao]()
+            
+            if let myConexoes = snapshot.value as? NSDictionary {
+                for (key, value) in myConexoes {
+                    if let conexaoData = value as? NSDictionary {
+                        if let nome = conexaoData["nomeCompleto"] as? String {
+                            let id = key as! String
+                            let profissao = conexaoData["profissao"] as! String
+                            let newConexao = Conexao(nomeCompleto: nome, id: id, profissao: profissao)
+                            conexoes.append(newConexao)
+                        }
+                    }
+                }
+            }
+            self.delegate?.dataReceived(conexoes: conexoes)
+        })
+    }
+    
 }
 

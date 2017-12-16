@@ -12,17 +12,20 @@ import Firebase
 
 
 class ConexaoDataSource: NSObject {
-    var data = [Conexao]()
-    //
     
-    
-    
-    let usuarioId = 1
-
+    //var data = [Conexao]()
+    //let usuarioId = 1
     
     override init() {
         super.init()
-        //let storageRef = self.storage.reference()
+        
+        
+        
+        
+        
+        
+        
+        /*//let storageRef = self.storage.reference()
         //let imagesRef = storageRef.child("images")
         var ref: DatabaseReference!
         ref = Database.database().reference()
@@ -38,7 +41,7 @@ class ConexaoDataSource: NSObject {
 
         //data.append(Conexao(nome:"Douglas Goncalves Machry", foto:"perfil", id:1))
         //data.append(Conexao(nome:"Allan Court", foto:"perfil", id:2))
-        //data.append(Conexao(nome:"Thatiane", foto:"perfil", id:3))
+        //data.append(Conexao(nome:"Thatiane", foto:"perfil", id:3))*/
     }
     
     
