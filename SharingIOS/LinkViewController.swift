@@ -24,7 +24,7 @@ class LinkViewController: UIViewController {
     
     @IBAction func saveLinkButtonClick(_ sender: Any) {
         if let link = txtLink.text, !link.isEmpty {
-            performSegue(withIdentifier: "salvarLink", sender: nil)
+            performSegue(withIdentifier: "linkAddUnwind", sender: nil)
         } else {
             showMessage(title: "Atenção", message: "Todos os campos são obrigatórios")
         }
@@ -35,7 +35,7 @@ class LinkViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "salvarLink" {
+        if segue.identifier == "linkAddUnwind" {
             if let user = Auth.auth().currentUser {
                 self.link = ModelFactory.getLink(url: txtLink.text!, usuario: user.uid)
             }

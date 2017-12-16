@@ -122,13 +122,13 @@ class CreateProfileController: UIViewController {
     }
     
     @IBAction func knowlegeAddUnwind(segue: UIStoryboardSegue) {
-        if let knowlegeVC = segue.source as? ConhecimentoViewController, segue.identifier == "salvarConhecimento" {
+        if let knowlegeVC = segue.source as? ConhecimentoViewController, segue.identifier == "knowlegeAddUnwind" {
             self.knowlege = knowlegeVC.knowlege
         }
     }
     
     @IBAction func linkAddUnwind(segue: UIStoryboardSegue) {
-        if let linkVC = segue.source as? LinkViewController, segue.identifier == "salvarLink" {
+        if let linkVC = segue.source as? LinkViewController, segue.identifier == "linkAddUnwind" {
             self.link = linkVC.link
         }
     }

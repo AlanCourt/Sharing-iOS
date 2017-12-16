@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import FirebaseStorage
 
-class ConexoesController: UIViewController, UITableViewDelegate, UITableViewDataSource, FetchData {
+class ConexoesController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var conexoesTable: UITableView!
     
@@ -20,31 +20,31 @@ class ConexoesController: UIViewController, UITableViewDelegate, UITableViewData
     //@IBOutlet weak var collectionView: UICollectionView!
     //private var data: ConexaoDataSource!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        databaseManager.delegate = self
-        databaseManager.getConexoes()
-        
-        
-        /*self.data = ConexaoDataSource()
-        self.collectionView.dataSource = self
-        let storage = Storage.storage()
-        let storageRef = storage.reference()*/
-        
+    override func viewWillAppear(_ animated: Bool) {
+        databaseManager.getReference(node: "usuario").observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            var conexoes = [Conexao]()
+            
+            if let myConexoes = snapshot.value as? NSDictionary {
+                for (key, value) in myConexoes {
+                    if let conexaoData = value as? NSDictionary {
+                        if let nome = conexaoData["nomeCompleto"] as? String {
+                            let id = key as! String
+                            let profissao = conexaoData["profissao"] as! String
+                            let foto = conexaoData["foto"] as! String
+                            let newConexao = Conexao(nomeCompleto: nome, foto:foto, id: id, profissao: profissao)
+                            conexoes.append(newConexao)
+                        }
+                    }
+                }
+            }
+            self.conexoes = conexoes
+            self.conexoesTable.reloadData()
+        })
     }
     
-    func dataReceived(conexoes: [Conexao]) {
-        self.conexoes = conexoes
-        
-        for conexao in conexoes {
-            
-            if conexao.id == Auth.auth().currentUser?.uid {
-                //ConexaoDataSource.init().userName = conexao.nomeCompleto
-            }
-            
-        }
-        
-        conexoesTable.reloadData()
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {

@@ -25,7 +25,7 @@ class ConhecimentoViewController: UIViewController {
     
     @IBAction func saveKnowlegeButtonClick(_ sender: Any) {
         if let title = txtTitle.text, let level = txtLevel.text, !title.isEmpty, !level.isEmpty {
-            performSegue(withIdentifier: "salvarConhecimento", sender:nil)
+            performSegue(withIdentifier: "knowlegeAddUnwind", sender:nil)
         } else {
             showMessage(title: "Atenção", message: "Todos os campos são obrigatórios")
         }
@@ -36,7 +36,7 @@ class ConhecimentoViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "salvarConhecimento" {
+        if segue.identifier == "knowlegeAddUnwind" {
             if let user = Auth.auth().currentUser {
                 self.knowlege = ModelFactory.getKnowlege(titulo: txtTitle.text!, nivel: txtLevel.text!, usuario: user.uid)
             }

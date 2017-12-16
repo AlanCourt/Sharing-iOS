@@ -11,7 +11,7 @@ import UIKit
 struct Conexao {
     
     var nomeCompleto: String
-    //var foto: String
+    var foto: String
     var id: String
     var profissao: String
     

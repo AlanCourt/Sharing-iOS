@@ -56,7 +56,11 @@ class DatabaseManager {
         return ref.child(node).child(uid)
     }
     
-    func getConexoes() {
+    func getReference(node:String) -> DatabaseReference {
+        return ref.child(node)
+    }
+    
+    /*func getConexoes() {
         
         ref.child("usuario").observeSingleEvent(of: .value, with: { (snapshot) in
             
@@ -68,7 +72,7 @@ class DatabaseManager {
                         if let nome = conexaoData["nomeCompleto"] as? String {
                             let id = key as! String
                             let profissao = conexaoData["profissao"] as! String
-                            let newConexao = Conexao(nomeCompleto: nome, id: id, profissao: profissao)
+                            let newConexao = Conexao(nomeCompleto: nome, foto:foto, id: id, profissao: profissao)
                             conexoes.append(newConexao)
                         }
                     }
@@ -76,7 +80,7 @@ class DatabaseManager {
             }
             self.delegate?.dataReceived(conexoes: conexoes)
         })
-    }
+    }*/
     
 }
 
