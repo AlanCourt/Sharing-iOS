@@ -219,7 +219,7 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Yvh-KX-yXI">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Yvh-KX-yXI" customClass="ConhecimentosCellController" customModule="SharingIOS" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="278" height="50"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -242,6 +242,10 @@
                                                                 </label>
                                                             </subviews>
                                                         </view>
+                                                        <connections>
+                                                            <outlet property="nivelConhec" destination="Qzs-Pq-VmQ" id="BFE-Ei-LXH"/>
+                                                            <outlet property="tituloConhec" destination="cKl-eX-uPF" id="HAY-Cn-Ot9"/>
+                                                        </connections>
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
@@ -256,7 +260,7 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="evW-p6-fm1">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="linkMeuPerfil" id="evW-p6-fm1" customClass="LinksCellController" customModule="SharingIOS" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="278" height="30"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -272,6 +276,9 @@
                                                                 </label>
                                                             </subviews>
                                                         </view>
+                                                        <connections>
+                                                            <outlet property="linkLabel" destination="e4A-aD-Zik" id="lBR-2E-U4e"/>
+                                                        </connections>
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
@@ -303,6 +310,8 @@
                     <connections>
                         <outlet property="btnSexo" destination="9Ka-Rn-eR5" id="cTC-jv-gKD"/>
                         <outlet property="imgProfile" destination="VC0-he-5we" id="jZF-Os-vxg"/>
+                        <outlet property="knowlegeCollectionView" destination="iTD-1b-Ve6" id="8ug-ca-fDC"/>
+                        <outlet property="linkCollectionView" destination="y9c-FQ-3Ct" id="mA4-X9-QiW"/>
                         <outlet property="txtBirthDate" destination="fJZ-P9-piG" id="awf-Fl-mFQ"/>
                         <outlet property="txtCity" destination="Fde-Ii-gMl" id="CmN-nk-7wa"/>
                         <outlet property="txtName" destination="sc6-7d-rZn" id="oNa-GZ-WPT"/>
@@ -386,7 +395,7 @@
                         <outlet property="popView" destination="chq-dU-u6a" id="Z01-ut-hoX"/>
                         <outlet property="txtLevel" destination="9bK-bQ-yK6" id="RAV-ae-O9v"/>
                         <outlet property="txtTitle" destination="Jey-e1-G59" id="KBq-22-OKC"/>
-                        <segue destination="aVi-Z6-m30" kind="unwind" unwindAction="knowlegeAddUnwindWithSegue:" id="Luz-MW-VgM"/>
+                        <segue destination="aVi-Z6-m30" kind="unwind" identifier="knowlegeAddUnwind" unwindAction="knowlegeAddUnwindWithSegue:" id="Luz-MW-VgM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rLg-br-cfG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -459,7 +468,7 @@
                     <connections>
                         <outlet property="popView" destination="8In-VE-8XJ" id="wFe-cJ-4IM"/>
                         <outlet property="txtLink" destination="9K8-CX-r9R" id="jZ1-un-zHN"/>
-                        <segue destination="sLw-JT-Dux" kind="unwind" unwindAction="linkAddUnwindWithSegue:" id="f9i-Di-Azi"/>
+                        <segue destination="sLw-JT-Dux" kind="unwind" identifier="linkAddUnwind" unwindAction="linkAddUnwindWithSegue:" id="f9i-Di-Azi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tm5-lm-SWb" userLabel="First Responder" sceneMemberID="firstResponder"/>

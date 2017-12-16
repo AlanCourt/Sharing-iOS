@@ -12,4 +12,10 @@ class LinksCellController: UICollectionViewCell {
     
     @IBOutlet weak var linkLabel: UILabel!
     
+    var link: [String:Any]! {
+        didSet {
+            self.linkLabel.text = self.link["url"] as? String
+        }
+    }
+    
 }

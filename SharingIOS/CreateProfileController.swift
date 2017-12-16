@@ -12,8 +12,11 @@ import MobileCoreServices
 import Firebase
 
 
-class CreateProfileController: UIViewController {
+class CreateProfileController: UIViewController, UICollectionViewDataSource  {
 
+    @IBOutlet weak var linkCollectionView: UICollectionView!
+    @IBOutlet weak var knowlegeCollectionView: UICollectionView!
+    
     @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var txtBirthDate: UITextField!
     @IBOutlet weak var txtCity: UITextField!
@@ -29,11 +32,15 @@ class CreateProfileController: UIViewController {
     var uid:String!
     
     var link:[String:Any]!
+    var links: [[String:Any]] = []
+    var knowleges: [[String:Any]] = []
     var knowlege:[String:Any]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         showDatePicker()
+        self.linkCollectionView.dataSource = self
+        //self.knowlegeCollectionView.dataSource = self
         btnSexo.isMultipleSelectionEnabled = false
         if let auth = Auth.auth().currentUser {
             self.uid = auth.uid
@@ -110,6 +117,10 @@ class CreateProfileController: UIViewController {
     func saveNewUser(_ user:[String:Any]) {
         let databaseManager = DatabaseManager()
         databaseManager.insert(node: "usuario", uid: self.uid, data: user)
+        for var i in (0..<links.count)
+        {
+            databaseManager.insert(node: "link", data: links[i])
+        }
         self.changeStoryboard(name: "Main")
     }
     
@@ -123,22 +134,26 @@ class CreateProfileController: UIViewController {
     
     @IBAction func knowlegeAddUnwind(segue: UIStoryboardSegue) {
         if let knowlegeVC = segue.source as? ConhecimentoViewController, segue.identifier == "knowlegeAddUnwind" {
-            self.knowlege = knowlegeVC.knowlege
+            self.knowleges.append(knowlegeVC.knowlege)
+            linkCollectionView.reloadData()
         }
     }
     
     @IBAction func linkAddUnwind(segue: UIStoryboardSegue) {
         if let linkVC = segue.source as? LinkViewController, segue.identifier == "linkAddUnwind" {
-            self.link = linkVC.link
+            self.links.append(linkVC.link)
+            linkCollectionView.reloadData()
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let knowlegeVC = segue.destination as? ConhecimentoViewController, segue.identifier == "conhecimentoPopup" {
-            knowlegeVC.knowlege = self.knowlege
-        } else if let linkVC = segue.destination as? LinkViewController, segue.identifier == "linkPopup" {
-            linkVC.link = self.link
-        }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "linkMeuPerfil", for: indexPath) as! LinksCellController
+        cell.link = self.links[indexPath.row]
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.links.count
     }
 }
 
