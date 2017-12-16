@@ -30,6 +30,7 @@
 		C29381831FDC5C6000C8BFAE /* PerfilController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29381821FDC5C6000C8BFAE /* PerfilController.swift */; };
 		C29381851FDC604A00C8BFAE /* ConhecimentosCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29381841FDC604A00C8BFAE /* ConhecimentosCellController.swift */; };
 		C29381871FDC606700C8BFAE /* LinksCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29381861FDC606700C8BFAE /* LinksCellController.swift */; };
+		C2A0DD7A1FE53D380037A832 /* MessagesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A0DD791FE53D380037A832 /* MessagesHandler.swift */; };
 		C2E9AF231FDC52F5003A85F2 /* ConexaoFlagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E9AF221FDC52F5003A85F2 /* ConexaoFlagCell.swift */; };
 		C2E9AF251FDC542A003A85F2 /* Conexao.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E9AF241FDC542A003A85F2 /* Conexao.swift */; };
 		C2E9AF271FDC548F003A85F2 /* ConexaoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E9AF261FDC548F003A85F2 /* ConexaoDataSource.swift */; };
@@ -62,6 +63,7 @@
 		C29381821FDC5C6000C8BFAE /* PerfilController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilController.swift; sourceTree = "<group>"; };
 		C29381841FDC604A00C8BFAE /* ConhecimentosCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConhecimentosCellController.swift; sourceTree = "<group>"; };
 		C29381861FDC606700C8BFAE /* LinksCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinksCellController.swift; sourceTree = "<group>"; };
+		C2A0DD791FE53D380037A832 /* MessagesHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesHandler.swift; sourceTree = "<group>"; };
 		C2E9AF221FDC52F5003A85F2 /* ConexaoFlagCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConexaoFlagCell.swift; sourceTree = "<group>"; };
 		C2E9AF241FDC542A003A85F2 /* Conexao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conexao.swift; sourceTree = "<group>"; };
 		C2E9AF261FDC548F003A85F2 /* ConexaoDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConexaoDataSource.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				C28982FE1FD2F9D900840787 /* ConexoesController.swift */,
 				C28983001FD2FA9100840787 /* MessageController.swift */,
 				C28DA9B51FDC474D001B9888 /* Mensagem.swift */,
+				C2A0DD791FE53D380037A832 /* MessagesHandler.swift */,
 				C25042C21FC9F21E004E6793 /* LoginController.swift */,
 				C28982FA1FD2F6C900840787 /* NewUserController.swift */,
 				C28982FC1FD2F76B00840787 /* CreateProfileController.swift */,
@@ -303,6 +306,7 @@
 			files = (
 				090C693D1FDF52A2000F3FB8 /* AutenticationController.swift in Sources */,
 				C25042C31FC9F21E004E6793 /* LoginController.swift in Sources */,
+				C2A0DD7A1FE53D380037A832 /* MessagesHandler.swift in Sources */,
 				090C69391FDF2272000F3FB8 /* DatabaseManager.swift in Sources */,
 				C2E9AF231FDC52F5003A85F2 /* ConexaoFlagCell.swift in Sources */,
 				09C3EEAF1FE21BFB0015A493 /* ModelFactory.swift in Sources */,

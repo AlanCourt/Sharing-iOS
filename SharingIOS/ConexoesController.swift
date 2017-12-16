@@ -39,7 +39,7 @@ class ConexoesController: UIViewController, UITableViewDelegate, UITableViewData
         for conexao in conexoes {
             
             if conexao.id == Auth.auth().currentUser?.uid {
-                
+                //ConexaoDataSource.init().userName = conexao.nomeCompleto
             }
             
         }

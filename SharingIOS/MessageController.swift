@@ -32,7 +32,10 @@ class MessageController: JSQMessagesViewController, UIImagePickerControllerDeleg
         getUserProfileData()
         
         self.senderId = Auth.auth().currentUser?.uid
-        self.senderDisplayName = (self.user["nomeCompleto"] as! String)
+        self.senderDisplayName = "Alan"
+        
+        print("Id " + senderId)
+        print("Name " + senderDisplayName)
         
     }
     
@@ -76,6 +79,8 @@ class MessageController: JSQMessagesViewController, UIImagePickerControllerDeleg
     }
     
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
+        
+        MessagesHandler.Instance.sendMessage(senderId: senderId, senderName: senderDisplayName, text: text)
         
         messages.append(JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text))
         collectionView.reloadData()
